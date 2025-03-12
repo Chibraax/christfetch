@@ -5,9 +5,22 @@ ChristFetch is a neofetch-like tool for display OS informations on the terminal.
 Currently working only on Linux.
 
 # Installation 
-Linux : 
-  
-# Build from source 
+Chrisfetch is written mainly in C++ and Conan as package manager. 
+In order to install christfetch you will need few tools.
+  `g++`
+  `CMake`
+  `conan`
+The easiest way to install it is by running the `run.sh` file in the root folder.
+
+If you want to build it from source : 
+Make sure you have all the tools installed.
+Then : 
+ `conan install . --output-folder=build --build=missing`
+ `cd build`
+ `cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release`
+ `cmake --build .`
+
+ The executable is named : `christfetch`.
 
 # Customization
 
