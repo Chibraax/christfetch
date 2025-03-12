@@ -37,13 +37,13 @@ Display :
 Gospel : 
       Gospels are located in ~/.config/christfetch/{lang}.
       
-      For now there is only gospels from Matthew,Mark,Luke,Jhon.
+   For now there is only gospels from Matthew,Mark,Luke,Jhon.
       
-      If you want add some verse, you can by respect the standard.
+   If you want add some verse, you can by respect the following standard : 
+   
+           `Chapter`-`Verse number`:`space``the verse`
       
-      `Chapter`-`Verse number`:`space``the verse`
-      
-      Example Inside Matthew.txt: 10-34: Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword.\n
+   Example Inside Matthew.txt: 10-34: Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword.\n
 
 
 # Contribution
