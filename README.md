@@ -43,7 +43,9 @@ Gospel :
    
            `Chapter`-`Verse number`:`space``the verse`
       
-   Example Inside Matthew.txt: 10-34: Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword.\n
+   Example Inside Matthew.txt: 
+   
+   `10-34: Do not suppose that I have come to bring peace to the earth. I did not come to bring peace, but a sword.\n`
 
 
 # Contribution
