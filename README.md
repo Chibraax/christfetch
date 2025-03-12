@@ -16,8 +16,10 @@ In order to install christfetch you will need few tools.
   
 The easiest way to install it is by running the `run.sh` file in the root folder.
 
+You'll need to enter your root password, the script will install the requiere tools.
+
 If you want to build it from source : 
-Make sure you have all the tools installed.
+
 Then : 
 
  `conan install . --output-folder=build --build=missing`
