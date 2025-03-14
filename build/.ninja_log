@@ -1,0 +1,26 @@
+# ninja log v6
+2	578	1741960840398353221	CMakeFiles/christfetch.dir/src/modules/distro/distro.cpp.o	315e3f7b73febc4b
+2	660	1741960840398771109	CMakeFiles/christfetch.dir/src/util/command.cpp.o	1da5a29e753feb2d
+2	675	1741960840398537479	CMakeFiles/christfetch.dir/src/modules/hostname/hostname.cpp.o	d83aedf238e735b4
+1	679	1741960840398010044	CMakeFiles/christfetch.dir/src/modules/cpu/cpu.cpp.o	6a51ea9c0d86f8b3
+2	684	1741960840398179824	CMakeFiles/christfetch.dir/src/modules/ip/public_ip.cpp.o	67e02acbcdcc7cb4
+8	728	1741960840403897629	CMakeFiles/christfetch.dir/src/detection/hostname/host.cpp.o	967644422bdc8e21
+1	911	1741960840397706692	CMakeFiles/christfetch.dir/src/modules/kernel/kernel.cpp.o	774136fa08926861
+1	952	1741960840397864970	CMakeFiles/christfetch.dir/src/modules/memory/memory.cpp.o	abe615538e9c1bb
+912	1553	1741960841307907333	CMakeFiles/christfetch.dir/src/modules/user/username.cpp.o	de171b2fd56107a7
+679	1573	1741960841074904832	CMakeFiles/christfetch.dir/src/detection/memory/memory.cpp.o	841f1cec4fd36aad
+661	1645	1741960841058904660	CMakeFiles/christfetch.dir/src/modules/disk/disk.cpp.o	a9c94bea434849a6
+684	1899	1741960841080904896	CMakeFiles/christfetch.dir/src/util/declar.cpp.o	de04fc51d005753e
+952	1928	1741960841347907762	CMakeFiles/christfetch.dir/src/detection/user/username.cpp.o	7db0566a6b95d907
+1573	2130	1741960841971914460	CMakeFiles/christfetch.dir/src/modules/ip/ip.cpp.o	e72bf97a2b7bcdf1
+1899	2496	1741960842294917927	CMakeFiles/christfetch.dir/src/modules/gospel/gospel.cpp.o	7c0606e6abe095a8
+1928	2598	1741960842323918239	CMakeFiles/christfetch.dir/src/detection/uptime/uptime.cpp.o	9d52177689ad1cf2
+2131	2645	1741960842526920418	CMakeFiles/christfetch.dir/src/modules/uptime/uptime.cpp.o	2b7e9efabfb56943
+1553	2914	1741960841949914224	CMakeFiles/christfetch.dir/src/detection/ip/ip.cpp.o	b9b8dabbf9824abd
+675	5548	1741960841071904799	CMakeFiles/christfetch.dir/src/detection/distro/distrop.cpp.o	5b6fd5486c00042c
+579	5636	1741960840974903758	CMakeFiles/christfetch.dir/src/detection/kernel/kernel.cpp.o	c3410c15d7d703e3
+3	5916	1741960840398897575	CMakeFiles/christfetch.dir/src/detection/cpu/cpu.cpp.o	91d799e5d81d5a9b
+1	6635	1741960840396897554	CMakeFiles/christfetch.dir/src/christfetch.cpp.o	8f0e415c85567e5e
+1645	6974	1741960842040915201	CMakeFiles/christfetch.dir/src/detection/gospel/gospel.cpp.o	af94465b51939135
+731	8917	1741960841127905400	CMakeFiles/christfetch.dir/src/util/display.cpp.o	ade7fc7ff54eed2c
+8917	9004	1741960849312993261	christfetch	b91daecbc47e4260
