@@ -47,18 +47,64 @@ void Argparser::Set_color_text(argparse::ArgumentParser& program){
 
   auto colors = program.present("--color-text");
 
-  int cnt = count(Argparser::all_colors.begin(),all_colors.end(),*colors);
+  int cnt = count(Argparser::all_colors_text.begin(),all_colors_text.end(),*colors);
   if(cnt <= 0){
     fmt::print("Error: couldn't find langue: {}\n",*colors);
+    exit(1);
   }
+
   if(cnt == 1) {
-    fmt::print("{}",*colors);
+    Argparser::color_text = *colors;
+    if(*colors == "blue"){
+      Argparser::color_text = "\033[34m";
+    }
+    if(*colors == "red"){
+      Argparser::color_text = "\033[31m";
+    }
+    if(*colors == "yellow"){
+      Argparser::color_text = "\033[33m";
+    }
   }
+
   if(cnt > 1){
     fmt::print("Error: couldn't find langue: {}\n",*colors);
+    exit(1);
   }
 
 }
+
+void Argparser::Set_color_ascii(argparse::ArgumentParser& program){
+
+  auto colors = program.present("--color-ascii");
+
+  int cnt = count(Argparser::all_colors_ascii.begin(),all_colors_ascii.end(),*colors);
+  if(cnt <= 0){
+    fmt::print("Error: couldn't find color: {}\n",*colors);
+    exit(1);
+  }
+
+  if(cnt == 1) {
+    Argparser::color_ascii = *colors;
+    if(*colors == "blue"){
+      Argparser::color_ascii = "\033[34m";
+    }
+    if(*colors == "red"){
+      Argparser::color_ascii = "\033[31m";
+    }
+    if(*colors == "yellow"){
+      Argparser::color_ascii = "\033[33m";
+    }
+  }
+  
+  if(cnt > 1){
+    fmt::print("Error: couldn't find langue: {}\n",*colors);
+    exit(1);
+  }
+
+}
+
+
+
 
 Argparser::Argparser(int argc, char* argv[]){
 
@@ -73,6 +119,9 @@ Argparser::Argparser(int argc, char* argv[]){
   program.add_argument("--color-text")
   .help("Define color of the informations. [red|blue|yellow]");
 
+  program.add_argument("--color-ascii")
+  .help("Define color of the ascii. [red|blue|yellow]");
+
   try {
     program.parse_args(argc, argv);
   }
@@ -80,7 +129,6 @@ Argparser::Argparser(int argc, char* argv[]){
     std::cerr << err.what() << std::endl;
     std::cerr << program;
   }
-
 
   if (program.present("--lang")) {
     Argparser::Set_lang(program);
@@ -91,19 +139,22 @@ Argparser::Argparser(int argc, char* argv[]){
   if (program.present("--color-text")) {
     Argparser::Set_color_text(program);
   }
+  if (program.present("--color-ascii")) {
+    Argparser::Set_color_ascii(program);
+  }
 }
 
 
 int main(int argc, char* argv[]) {
-
   if(argc == 1){
-    display_christ(); 
+    Argparser Parse;
+    display_christ(Parse); 
     fmt::print("{}\n",get_gospel());
     return 0;
   }
 
   Argparser Parse(argc, argv);
-
+  display_christ(Parse);
   fmt::print("{}\n",get_gospel());
 
   return 0;

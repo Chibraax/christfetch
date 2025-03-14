@@ -1,9 +1,11 @@
 #include <string>
 #include <vector>
 #include <map>
+#include "../src/christfetch.hpp"
 
 #ifndef HEADER_CPU
 #define HEADER_CPU
+
 
     extern std::string get_name_cpu();
     extern std::string get_cores();
@@ -49,7 +51,7 @@
 #define CHRISTFETCH
     
     extern std::map<int, std::vector<std::string>> get_christascii_dict();
-    extern bool display_christ();
+    extern bool display_christ(Argparser&);
 
 #endif
 

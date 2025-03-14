@@ -13,6 +13,7 @@
 
 #include "nlohmann/json.hpp"
 #include "../christfetch.hpp"
+#include "fmt/core.h"
 
 using namespace std;
 using json = nlohmann::ordered_json;
@@ -144,16 +145,9 @@ string get_home(string& end_path){
     return path;
 }
 
-bool display_christ(){
-
-    Argparser Test;
-
-
-
-
-
-
-
+bool display_christ(Argparser& Parser){
+    string color_text = Parser.Get_color_text();
+    string color_ascii = Parser.Get_color_ascii();
 
     cout << "\n";
     auto christ_dict = get_christascii_dict();
@@ -184,17 +178,18 @@ bool display_christ(){
     vector<string> vec_json_key = get_vec_json(jsonData, vec_json_type);
 
     // Print ASCII + System Information
-    for(auto& x : ascii_christ){
-        cout << RED << x;
+    for(auto& ascii_character : ascii_christ){
+        //cout << color_ascii << ascii_character;
+        fmt::print("{}{}",color_ascii,ascii_character);
         cout << RESET;
        if(c < length_json){
-            for(int cc = 0; cc < espacement_necessaire - x.length(); cc++){
+            for(int cc = 0; cc < espacement_necessaire - ascii_character.length(); cc++){
                 cout << " ";
             }
             if(c <= system_information.size()){
                 cout  << vec_json_key[c];
                 cout << " ";
-                cout << WHITE << system_information[vec_json_type[c]]();
+                cout << color_text << system_information[vec_json_type[c]]();
             }
         }
         c+=1;
