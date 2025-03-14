@@ -1,10 +1,9 @@
 #ifndef LANG_PARSE
 #define LANG_PARSE
 
+  #include "argparse/argparse.hpp"
   #include <vector>
   #include <string>
-  
-  std::vector<std::string> all_languages = {"en","fr"};
 
   class Argparser{
     public:
@@ -17,12 +16,15 @@
       void Set_ascii_file(argparse::ArgumentParser& program);
       std::string Get_color_text(){return Argparser::color_text;};
       void Set_color_text(argparse::ArgumentParser& program);
+      
       bool Getapostle(argparse::ArgumentParser& program);
       bool Setapostle(std::string apostle);
       bool Getgospel(argparse::ArgumentParser& program);
       bool Setgospel(std::string apostle);
 
     private:
+      std::vector<std::string> all_languages = {"en","fr"};
+      std::vector<std::string> all_colors = {"red","blue","yellow"};
       std::string lang{"en"};
       std::string ascii_file{};
       std::string network_interface{};

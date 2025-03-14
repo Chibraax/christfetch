@@ -15,7 +15,7 @@ void Argparser::Set_lang(argparse::ArgumentParser& program){
 
   auto fn = program.present("--lang");
 
-  int cnt = count(all_languages.begin(),all_languages.end(),*fn);
+  int cnt = count(Argparser::all_languages.begin(),all_languages.end(),*fn);
   if(cnt <= 0){
     fmt::print("Error: couldn't find langue: {}\n",*fn);
   }
@@ -45,14 +45,17 @@ void Argparser::Set_ascii_file(argparse::ArgumentParser& program){
 
 void Argparser::Set_color_text(argparse::ArgumentParser& program){
 
-  auto path_ascii = program.present("--ascii-file");
-  std::ifstream file(*path_ascii);
+  auto colors = program.present("--color-text");
 
-  if(file.good()){
-    fmt::print("good ascii\n");
+  int cnt = count(Argparser::all_colors.begin(),all_colors.end(),*colors);
+  if(cnt <= 0){
+    fmt::print("Error: couldn't find langue: {}\n",*colors);
   }
-  else{
-    fmt::print("Error: couldn't find path: {}\n",*path_ascii);
+  if(cnt == 1) {
+    fmt::print("{}",*colors);
+  }
+  if(cnt > 1){
+    fmt::print("Error: couldn't find langue: {}\n",*colors);
   }
 
 }
