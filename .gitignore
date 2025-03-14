@@ -1,3 +1,4 @@
 perso.sh
 .vscode/
+build/
 CMakeUserPresets.json

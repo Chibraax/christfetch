@@ -11,8 +11,7 @@
 
 using namespace std;
 
-
-void Argparser::Getlang(argparse::ArgumentParser& program){
+void Argparser::Set_lang(argparse::ArgumentParser& program){
 
   auto fn = program.present("--lang");
 
@@ -22,7 +21,7 @@ void Argparser::Getlang(argparse::ArgumentParser& program){
   }
   if(cnt == 1) {
     if(*fn != "en"){
-      Argparser::Setlang(*fn);
+      Argparser::lang = *fn;
     }
   }
   if(cnt > 1){
@@ -60,24 +59,23 @@ Argparser::Argparser(int argc, char* argv[]){
 
   if (program.present("--lang")) {
     
-    Argparser::Getlang(program);
+    Argparser::Set_lang(program);
 
   }
 
 }
 
 
-
-
 int main(int argc, char* argv[]) {
 
   if(argc == 1){
-    display_christ();
+    display_christ(); 
+    fmt::print("{}\n",get_gospel());
+    return 0;
   }
-  Argparser Parse(argc, argv);
-  cout << get_gospel() << endl;
 
-  
-  
+  Argparser Parse(argc, argv);
+  fmt::print("{}\n",get_gospel());
+
   return 0;
 }

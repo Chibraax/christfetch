@@ -7,11 +7,9 @@
 #include <sstream>
 #include <algorithm>
 #include <regex>
-
 #include "../../include/function.hpp"
 #include "../../include/logo.hpp"
 #include "display.hpp"
-
 
 #include "nlohmann/json.hpp"
 
@@ -134,7 +132,6 @@ vector<string> get_vec_json(const json& obj_json, vector<string>& vec_json_type)
 
     return vec_json;
     }
-    
     return vec_json;
 }
 

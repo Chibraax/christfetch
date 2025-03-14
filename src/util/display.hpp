@@ -1,14 +1,13 @@
 #ifndef DISPLAY_HPP
 #define DISPLAY_HPP
 
-    std::string get_custom(){
-        return " ";
-    }
+    std::string get_custom(){return " ";}
 
 
     #include <map>
     #include <vector>
     #include <string>
+
 
     // All functions for fetch
     std::map<std::string, std::string(*)()> system_information =

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 #include "../../../include/function.hpp"
 
 std::string get_gospel(){

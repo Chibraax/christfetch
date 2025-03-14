@@ -6,11 +6,9 @@
 #include <map>
 #include <random>
 #include <regex>
-#include <stdio.h>
 #include <sstream>
 
 using namespace std;
-
 #define LANG "fr"
 
 struct gospel
@@ -93,8 +91,6 @@ bool get_all_verses(string& path,vector<string>& all_verses){
     return true;
 }
 
-
-
 string get_random_verse(int& number, vector<string>& all_verses){return all_verses[number];}
 
 string get_number_verse(string& final_gospel){
@@ -120,11 +116,6 @@ bool remove_number_verse(string& random_verse ){
 string getgospel(){
 
 
-
-
-    #define LANG "fr"
-
-
     // Define useful variables
     ostringstream ss;
     gospel gospel_lang;
@@ -144,6 +135,7 @@ string getgospel(){
 
     define_langue_n_path(gospel_lang);
     int size_struct = gospel_lang.files.size();
+
     nombre_random  = generate_random(1,size_struct);
 
 
