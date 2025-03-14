@@ -9,7 +9,6 @@
 #include <sstream>
 
 using namespace std;
-#define LANG "fr"
 
 struct gospel
 {
@@ -30,8 +29,8 @@ int generate_random(int base_number,int& limit){
 }
 
 bool define_langue_n_path(struct gospel& gospel_lang){
-
-    if(LANG == "en"){
+    string lang = "fr";
+    if(lang == "en"){
 
         gospel_lang.lang_path = "en/";
         gospel_lang.files.insert(make_pair(1,"Matthew.txt"));
@@ -41,7 +40,7 @@ bool define_langue_n_path(struct gospel& gospel_lang){
 
         return true;
     }
-    if(LANG == "fr"){
+    if(lang == "fr"){
 
         gospel_lang.lang_path = "fr/";
         gospel_lang.files.insert(make_pair(1,"Mathieu.txt"));

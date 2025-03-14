@@ -13,12 +13,10 @@
 
       void Set_lang(argparse::ArgumentParser& program);
       std::string Get_lang(){return Argparser::lang;};
-      void Getascii_file(argparse::ArgumentParser& program);
-      bool Setascii_file(std::string file);
-      bool Getnetwork_interface();
-      bool Setnetwork_interface(std::string network_interface);
-      bool Getcolor_text(argparse::ArgumentParser& program);
-      bool Setcolor_text(std::string color);
+      std::string Getascii_file(){return Argparser::ascii_file;};
+      void Set_ascii_file(argparse::ArgumentParser& program);
+      std::string Get_color_text(){return Argparser::color_text;};
+      void Set_color_text(argparse::ArgumentParser& program);
       bool Getapostle(argparse::ArgumentParser& program);
       bool Setapostle(std::string apostle);
       bool Getgospel(argparse::ArgumentParser& program);
