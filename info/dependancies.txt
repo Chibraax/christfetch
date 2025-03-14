@@ -1,5 +1,0 @@
-procps : https://gitlab.com/procps-ng/procps/
-MagickImage : 
-json : https://github.com/nlohmann/json
-g++ 17
-cmake / make 
