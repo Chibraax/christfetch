@@ -1,3 +1,0 @@
-/home/wbruce/script/c++/Christfetch/build/CMakeFiles/christfetch.dir
-/home/wbruce/script/c++/Christfetch/build/CMakeFiles/edit_cache.dir
-/home/wbruce/script/c++/Christfetch/build/CMakeFiles/rebuild_cache.dir

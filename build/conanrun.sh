@@ -1,1 +1,0 @@
-. "/mnt/homecrypted/wbruce/script/c++/Christfetch/build/conanrunenv-release-x86_64.sh"
