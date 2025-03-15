@@ -35,10 +35,11 @@ void Argparser::Set_ascii_file(argparse::ArgumentParser& program){
   std::ifstream file(*path_ascii);
 
   if(file.good()){
-    fmt::print("good ascii\n");
+    Argparser::ascii_file = *path_ascii;
   }
   else{
     fmt::print("Error: couldn't find path: {}\n",*path_ascii);
+    exit(1);
   }
 
 }
@@ -63,6 +64,9 @@ void Argparser::Set_color_text(argparse::ArgumentParser& program){
     }
     if(*colors == "yellow"){
       Argparser::color_text = "\033[33m";
+    }
+    if(*colors == "magenta"){
+      Argparser::color_text = "\033[35m";
     }
   }
 
@@ -94,6 +98,9 @@ void Argparser::Set_color_ascii(argparse::ArgumentParser& program){
     if(*colors == "yellow"){
       Argparser::color_ascii = "\033[33m";
     }
+    if(*colors == "magenta"){
+      Argparser::color_ascii = "\033[35m";
+    }
   }
   
   if(cnt > 1){
@@ -117,10 +124,10 @@ Argparser::Argparser(int argc, char* argv[]){
   .help("Set your own ascii file");
 
   program.add_argument("--color-text")
-  .help("Define color of the informations. [red|blue|yellow]");
+  .help("Define color of the informations. [red|blue|yellow|magenta]");
 
   program.add_argument("--color-ascii")
-  .help("Define color of the ascii. [red|blue|yellow]");
+  .help("Define color of the ascii. [red|blue|yellow|magenta]");
 
   try {
     program.parse_args(argc, argv);
@@ -142,6 +149,7 @@ Argparser::Argparser(int argc, char* argv[]){
   if (program.present("--color-ascii")) {
     Argparser::Set_color_ascii(program);
   }
+  
 }
 
 

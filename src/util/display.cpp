@@ -149,7 +149,7 @@ bool display_christ(Argparser& Parser){
     string color_text = Parser.Get_color_text();
     string color_ascii = Parser.Get_color_ascii();
 
-    cout << "\n";
+    fmt::print("\n");
     auto christ_dict = get_christascii_dict();
     // Affect value to variables
     int size_ascii_dict = christ_dict.size();
@@ -162,40 +162,79 @@ bool display_christ(Argparser& Parser){
     string path = get_home(end_path);
     ifstream file_json(path);
     json jsonData;
-    file_json >> jsonData; // Lire le JSON
-    file_json.close();
+    if(file_json.good()){
+        file_json >> jsonData; // Lire le JSON
+        file_json.close();
+    }
+    else{
+        jsonData = user_json;
+    }
+
 
     // Length .json
     int length_json = get_length_json(jsonData);
+    
     // Length ASCII
     int longest_line = 0;
     int length_ascii = get_length_ascii(ascii_christ,longest_line);
-
     int espacement_necessaire = longest_line+5;
 
     // Vector manip
     vector<string> vec_json_type;
     vector<string> vec_json_key = get_vec_json(jsonData, vec_json_type);
+    // Own ascii
 
-    // Print ASCII + System Information
-    for(auto& ascii_character : ascii_christ){
-        //cout << color_ascii << ascii_character;
-        fmt::print("{}{}",color_ascii,ascii_character);
-        cout << RESET;
-       if(c < length_json){
-            for(int cc = 0; cc < espacement_necessaire - ascii_character.length(); cc++){
-                cout << " ";
-            }
-            if(c <= system_information.size()){
-                cout  << vec_json_key[c];
-                cout << " ";
-                cout << color_text << system_information[vec_json_type[c]]();
-            }
+
+    if(Parser.Getascii_file().size() > 1){
+        vector<string> user_ascii;
+        ifstream user_ascii_file{Parser.Getascii_file()};
+        string line;
+        while(getline(user_ascii_file,line)){
+            user_ascii.push_back(line);
         }
-        c+=1;
-        cout << RESET << endl;
-}
-    cout << endl;
+        int longest_line = 0;
+        int length_ascii = get_length_ascii(user_ascii,longest_line);
+        int espacement_necessaire = longest_line+5;
+
+        for(auto& ascii_character : user_ascii){
+            fmt::print("{}{}",color_ascii,ascii_character);
+            fmt::print(RESET);
+        if(c < length_json){
+                for(int cc = 0; cc < espacement_necessaire - ascii_character.length(); cc++){
+                    fmt::print(" ");
+                }
+                if(c <= system_information.size()){
+                    fmt::print(vec_json_key[c]);
+                    fmt::print(" ");
+                    fmt::print("{}{}",color_text,system_information[vec_json_type[c]]());
+                }
+            }
+            c+=1;
+            fmt::print("{}\n",RESET);
+        }
+    }
+
+    else{
+        // Print ASCII + System Information
+        for(auto& ascii_character : ascii_christ){
+            fmt::print("{}{}",color_ascii,ascii_character);
+            cout << RESET;
+        if(c < length_json){
+                for(int cc = 0; cc < espacement_necessaire - ascii_character.length(); cc++){
+                    cout << " ";
+                }
+                if(c <= system_information.size()){
+                    cout  << vec_json_key[c];
+                    cout << " ";
+                    cout << color_text << system_information[vec_json_type[c]]();
+                }
+            }
+            c+=1;
+            cout << RESET << endl;
+        }
+    }
+
+    fmt::print("\n");
     return true;
 
 }

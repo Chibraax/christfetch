@@ -27,8 +27,8 @@
 
     private:
       std::vector<std::string> all_languages = {"en","fr"};
-      std::vector<std::string> all_colors_text = {"red","blue","yellow"};
-      std::vector<std::string> all_colors_ascii = {"red","blue","yellow"};
+      std::vector<std::string> all_colors_text = {"red","blue","yellow","magenta"};
+      std::vector<std::string> all_colors_ascii = {"red","blue","yellow","magenta"};
 
       std::string lang{"en"};
       std::string ascii_file{};
