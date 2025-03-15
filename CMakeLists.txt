@@ -13,7 +13,7 @@ src/modules/distro/distro.cpp src/modules/hostname/hostname.cpp
 src/util/command.cpp src/detection/cpu/cpu.cpp src/detection/hostname/host.cpp src/detection/kernel/kernel.cpp src/modules/disk/disk.cpp
 src/detection/distro/distrop.cpp src/detection/memory/memory.cpp src/util/declar.cpp src/util/display.cpp src/modules/user/username.cpp src/detection/user/username.cpp
 src/detection/ip/ip.cpp src/modules/ip/ip.cpp src/modules/disk/disk.cpp src/detection/gospel/gospel.cpp src/modules/gospel/gospel.cpp 
-src/detection/uptime/uptime.cpp src/modules/uptime/uptime.cpp)   
+src/detection/uptime/uptime.cpp src/modules/uptime/uptime.cpp src/modules/colors/colors.cpp)   
 
 target_link_libraries(christfetch  nlohmann_json::nlohmann_json)
 target_link_libraries(christfetch  argparse::argparse)

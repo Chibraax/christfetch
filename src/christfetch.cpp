@@ -44,6 +44,22 @@ void Argparser::Set_ascii_file(argparse::ArgumentParser& program){
 
 }
 
+void Argparser::Set_config_file(argparse::ArgumentParser& program){
+
+  auto path_ascii = program.present("--config");
+  std::ifstream file(*path_ascii);
+
+  if(file.good()){
+    Argparser::config = *path_ascii;
+  }
+  else{
+    fmt::print("Error: couldn't find path: {}\n",*path_ascii);
+    exit(1);
+  }
+
+}
+
+
 void Argparser::Set_color_text(argparse::ArgumentParser& program){
 
   auto colors = program.present("--color-text");
@@ -67,6 +83,9 @@ void Argparser::Set_color_text(argparse::ArgumentParser& program){
     }
     if(*colors == "magenta"){
       Argparser::color_text = "\033[35m";
+    }
+    if(*colors == "green"){
+      Argparser::color_text = "\033[32m";
     }
   }
 
@@ -101,6 +120,9 @@ void Argparser::Set_color_ascii(argparse::ArgumentParser& program){
     if(*colors == "magenta"){
       Argparser::color_ascii = "\033[35m";
     }
+    if(*colors == "green"){
+      Argparser::color_ascii = "\033[32m";
+    }
   }
   
   if(cnt > 1){
@@ -125,9 +147,13 @@ Argparser::Argparser(int argc, char* argv[]){
 
   program.add_argument("--color-text")
   .help("Define color of the informations. [red|blue|yellow|magenta]");
-
+  
   program.add_argument("--color-ascii")
   .help("Define color of the ascii. [red|blue|yellow|magenta]");
+
+  program.add_argument("--config")
+  .help("Select your own JSONC file");
+
 
   try {
     program.parse_args(argc, argv);
@@ -148,6 +174,9 @@ Argparser::Argparser(int argc, char* argv[]){
   }
   if (program.present("--color-ascii")) {
     Argparser::Set_color_ascii(program);
+  }
+  if (program.present("--config")) {
+    Argparser::Set_config_file(program);
   }
   
 }

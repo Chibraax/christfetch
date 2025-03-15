@@ -19,7 +19,9 @@ vector<string> bible_ascii = {
     "     | L |  / ",
     "     | E | /",
     "     |===|/",
-    "     '---'"
+    "     '---'",
+    "",
+    ""
 };
 
 vector<string> big_bible_ascii = {
@@ -43,7 +45,8 @@ vector<string> big_bible_ascii = {
     "             \\ /\\  \\_________________________\\",
     " all  your    \\  \\ / ______________________  /",
     "               \\  / ______________________  /",
-    "Endeavors!!!    \\/_________________________/"
+    "Endeavors!!!    \\/_________________________/",
+
 };
 
 vector<string> big_cross_ascii = {
@@ -106,7 +109,9 @@ vector<string> multiples_cross_ascii = {
     "        ||   |   |   ||",
     "        ||_.-|   |-,_||",
     "      .-\"`   `\"`'`   `\"-.",
-    "   .'                   '."
+    "   .'                   '.",
+    "",
+    ""
 };
 
 vector<string> cross_circle = {
@@ -119,6 +124,8 @@ vector<string> cross_circle = {
     "      | |",
     "      | |",
     "      |A|",
+    "",
+    "",
     "",
     ""
 };
@@ -135,7 +142,9 @@ vector<string> crucifixed = {
     "         > |/",
     "        / //",
     "        |//",
-    "        \\(\\"
+    "        \\(\\",
+    "",
+    ""
 };
 
 vector<string> little_cross = {
@@ -149,7 +158,10 @@ vector<string> little_cross = {
     "",
     "",
     "",
-    ""
+    "",
+    "",
+    "",
+    "",
 };
 
 

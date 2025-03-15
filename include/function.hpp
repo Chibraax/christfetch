@@ -88,3 +88,8 @@
     extern std::string getuptime();
     extern std::string get_uptime();
 #endif
+
+#ifndef COLORS_HPP
+#define COLORS_HPP
+    extern std::string get_colors();
+#endif

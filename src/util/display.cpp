@@ -64,18 +64,20 @@ vector<string> get_vec_json(const json& obj_json, vector<string>& vec_json_type)
     vector<string> vec_json;
     regex key_pattern_double_bar("║");
     regex key_pattern_single_bar("│");
-
+    regex key_pattern_single_point("•");
     regex key2_pattern("╔═══════════╗");
     regex key3_pattern("╚═══════════╝");
-
     regex key4_pattern("╭───────────╮");
     regex key5_pattern("╰───────────╯");
-
+    regex key_6_pattern("•••••••••••••");
+    regex key_7_pattern("╠═══════════╣");
     regex red_key_pattern("\\{\\#31\\}");
     regex green_key_pattern("\\{\\#32\\}");
     regex blue_key_pattern("\\{\\#34\\}");
     regex yellow_key_pattern("\\{\\#33\\}");
     regex violet_key_pattern("\\{\\#35\\}");
+    regex bald_key_pattern("\\{\\#1\\}");
+
 
 
     
@@ -100,15 +102,23 @@ vector<string> get_vec_json(const json& obj_json, vector<string>& vec_json_type)
             {
                 key = regex_replace(key,key5_pattern,"\033[34m╰───────────╯\033[0m");
             }
-
+            else if (regex_search(key, match, key_6_pattern))
+            {
+                key = regex_replace(key,key_6_pattern,"\033[34m•••••••••••••\033[0m");
+            }
+            else if (regex_search(key, match, key_7_pattern))
+            {
+                key = regex_replace(key,key_7_pattern,"\033[34m╠═══════════╣\033[0m");
+            }
             if(regex_search(key,match,key_pattern_single_bar) != string::npos ){
                 key = regex_replace(key,key_pattern_single_bar,"\033[34m│\033[0m");
             }
-
             if(regex_search(key,match,key_pattern_double_bar) != string::npos ){
                 key = regex_replace(key,key_pattern_double_bar,"\033[34m║\033[0m");
             }
-
+            if(regex_search(key,match,key_pattern_single_point) != string::npos ){
+                key = regex_replace(key,key_pattern_single_point,"\033[34m•\033[0m");
+            }
             if(regex_search(key,match,red_key_pattern)){
                 key = regex_replace(key,red_key_pattern,"\033[31m");
             }
@@ -123,6 +133,9 @@ vector<string> get_vec_json(const json& obj_json, vector<string>& vec_json_type)
             }
             if(regex_search(key,match,violet_key_pattern)){
                 key = regex_replace(key,violet_key_pattern,"\033[35m");
+            }
+            if(regex_search(key,match,bald_key_pattern)){
+                key = regex_replace(key,bald_key_pattern,"\033[1m");
             }
             
 
@@ -146,33 +159,46 @@ string get_home(string& end_path){
 }
 
 bool display_christ(Argparser& Parser){
+    fmt::print("\n");
+    // Get variables inside Class
     string color_text = Parser.Get_color_text();
     string color_ascii = Parser.Get_color_ascii();
+    string config_file = Parser.Get_config_file();
+    json jsonData;
+    int length_json;
 
-    fmt::print("\n");
+    // Get size christ dict ascii
     auto christ_dict = get_christascii_dict();
-    // Affect value to variables
     int size_ascii_dict = christ_dict.size();
-
+    // Pick a random ascii
     random_number = generate_random(size_ascii_dict);
     vector<string> ascii_christ = christ_dict.at(random_number);
 
-    //json
-    string end_path = "/.config/christfetch/examples/1.jsonc";
-    string path = get_home(end_path);
-    ifstream file_json(path);
-    json jsonData;
-    if(file_json.good()){
-        file_json >> jsonData; // Lire le JSON
-        file_json.close();
+    // JSON
+    if(config_file.size() > 1){
+        ifstream file_json(config_file);
+        if(file_json.good()){
+            file_json >> jsonData; // Lire le JSON
+            file_json.close();
+        }
+        else{
+            jsonData = user_json;
+        }
+        length_json = get_length_json(jsonData);
     }
     else{
-        jsonData = user_json;
+        string end_path = "/.config/christfetch/examples/1.jsonc";
+        string path = get_home(end_path);
+        ifstream file_json(path);
+        if(file_json.good()){
+            file_json >> jsonData; // Lire le JSON
+            file_json.close();
+        }
+        else{
+            jsonData = user_json;
+        }
+        length_json = get_length_json(jsonData);
     }
-
-
-    // Length .json
-    int length_json = get_length_json(jsonData);
     
     // Length ASCII
     int longest_line = 0;
@@ -182,8 +208,6 @@ bool display_christ(Argparser& Parser){
     // Vector manip
     vector<string> vec_json_type;
     vector<string> vec_json_key = get_vec_json(jsonData, vec_json_type);
-    // Own ascii
-
 
     if(Parser.Getascii_file().size() > 1){
         vector<string> user_ascii;

@@ -18,6 +18,7 @@
     #include <string>
     #include <regex>
 
+    /*
     std::string c1 = "\033[34m"; // Blue
     std::string c2 = "\033[37m"; // White
     std::string c3 = "\033[32m"; // Green
@@ -36,4 +37,5 @@
     std::regex pattern6(R"(\$\{c6\})");
     std::regex pattern7(R"(\$\{c7\})");
 
+    */
 #endif
