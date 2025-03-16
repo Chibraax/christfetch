@@ -81,6 +81,7 @@ string getip(){
     afficherInterfaces_syscall(inter);
     enleverDoublons(inter);
     inter.erase(find(inter.begin(),inter.end(), "lo"));
+    inter.erase(find(inter.begin(),inter.end(), "docker0"));
     final = get_activ(inter);
 
 
