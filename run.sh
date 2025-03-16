@@ -94,6 +94,7 @@ Debian)
         fi
 
         # Install Conan
+        conan profile detect --force 
         wget https://github.com/conan-io/conan/releases/download/2.12.2/conan-2.12.2-amd64.deb && sudo dpkg -i conan-2.12.2-amd64.deb && rm conan-2.12.2-amd64.deb;
         # Install christfetch
         conan install . --output-folder=build --build=missing;
@@ -102,14 +103,13 @@ Debian)
         cmake --build .;
 ;;
 Arch)
-        pacman -Q g++ > /dev/null
-
-        if [[ "$?" -eq 0 ]]
+        # Verif G++
+        if [[ -f "/usr/bin/g++" ]]
         then
-                echo "Curl installed"
+          echo "Compiler G++ installed";
         else
-                echo "Curl not installed"
-                sudo pacman -Syu g++;
+          echo "G++ not installed";
+          sudo pacman -Syu g++ -y;
         fi
 
         # Verif Fastfetch
@@ -120,15 +120,17 @@ Arch)
                 echo "Cmake installed"
         else
                 echo "Cmake not installed"
-                sudo pacman -Syu Cmake;
+                sudo pacman -Syu cmake;
         fi
         fi
 
         # Install Conan
-        
+        yay -S conan
+        conan profile detect --force 
         # Install christfetch
         conan install . --output-folder=build --build=missing;
         cd build;
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release;
         cmake --build .;
+
 esac

@@ -51,6 +51,7 @@
 #define CHRISTFETCH
     
     extern std::map<int, std::vector<std::string>> get_christascii_dict();
+    extern std::map<int, std::vector<std::string>> get_osascii_dict();
     extern bool display_christ(Argparser&);
 
 #endif

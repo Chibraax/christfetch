@@ -30,6 +30,7 @@ void afficherInterfaces_syscall(vector<string>& inter) {
     for (iface = interfaces; iface != nullptr; iface = iface->ifa_next) {
         if (iface->ifa_addr == nullptr) continue; // Si pas d'adresse, ignorer
         inter.push_back(iface->ifa_name);
+        // cout << "interface : " << iface->ifa_name << endl;
     }
 
     // Libérer la mémoire
@@ -57,7 +58,7 @@ string get_activ(vector<string>& inter) {
                 if (ioctl(fd, SIOCGIFADDR, &ifr) == 0) { // Vérifier si ioctl réussit
                     char* ip = inet_ntoa(((sockaddr_in*)&ifr.ifr_addr)->sin_addr);
                     result << ip << " " << "(" << interface  << ")" << " ";
-                } 
+                }
                 close(fd);
             }
         }
@@ -66,7 +67,7 @@ string get_activ(vector<string>& inter) {
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
+        //std::cerr << e.what() << '\n';
         return "";
     }
 
@@ -81,9 +82,7 @@ string getip(){
     afficherInterfaces_syscall(inter);
     enleverDoublons(inter);
     inter.erase(find(inter.begin(),inter.end(), "lo"));
-    inter.erase(find(inter.begin(),inter.end(), "docker0"));
     final = get_activ(inter);
-
 
     return final;
 }

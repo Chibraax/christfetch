@@ -6,6 +6,7 @@
   #include <string>
 
   class Argparser{
+    
     public:
       Argparser(int argc, char* argv[]);
       Argparser(){};
@@ -25,6 +26,9 @@
       void Set_config_file(argparse::ArgumentParser& program);
       std::string Get_config_file(){return Argparser::config;};  
 
+      void Set_os_ascii_file(argparse::ArgumentParser& program);
+      int Get_os_ascii_file(){return Argparser::os_ascii;};  
+
       bool Getapostle(argparse::ArgumentParser& program);
       bool Setapostle(std::string apostle);
       bool Getgospel(argparse::ArgumentParser& program);
@@ -34,9 +38,11 @@
       std::vector<std::string> all_languages = {"en","fr"};
       std::vector<std::string> all_colors_text = {"red","blue","yellow","magenta","green"};
       std::vector<std::string> all_colors_ascii = {"red","blue","yellow","magenta","green"};
+      std::vector<std::string> all_os_ascii = {"fedora","arch","ubuntu","debian","mint","opensuse","kali"};
 
       std::string lang{"en"};
       std::string ascii_file{};
+      int os_ascii = 0;
       std::string config{};
       std::string network_interface{};
       std::string color_text{""};

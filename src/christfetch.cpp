@@ -59,6 +59,47 @@ void Argparser::Set_config_file(argparse::ArgumentParser& program){
 
 }
 
+void Argparser::Set_os_ascii_file(argparse::ArgumentParser& program){
+
+
+  auto distro = program.present("--os-ascii");
+
+  int cnt = count(Argparser::all_os_ascii.begin(),all_os_ascii.end(),*distro);
+  if(cnt <= 0){
+    fmt::print("Error: couldn't find langue: {}\n",*distro);
+  }
+  if(cnt == 1) {
+    if(cnt == 1) {
+      if(*distro == "fedora"){
+        Argparser::os_ascii = 1;
+      }
+      if(*distro == "arch"){
+        Argparser::os_ascii = 2;
+      }
+      if(*distro == "ubuntu"){
+        Argparser::os_ascii = 3;
+      }
+      if(*distro == "debian"){
+        Argparser::os_ascii = 4;
+      }
+      if(*distro == "mint"){
+        Argparser::os_ascii = 5;
+      }
+      if(*distro == "opensuse"){
+        Argparser::os_ascii = 6;
+      }
+      if(*distro == "kali"){
+        Argparser::os_ascii = 7;
+      }
+
+    }
+  }
+  if(cnt > 1){
+    fmt::print("Error: couldn't find langue: {}\n",*distro);
+  }
+
+}
+
 
 void Argparser::Set_color_text(argparse::ArgumentParser& program){
 
@@ -133,8 +174,6 @@ void Argparser::Set_color_ascii(argparse::ArgumentParser& program){
 }
 
 
-
-
 Argparser::Argparser(int argc, char* argv[]){
 
   argparse::ArgumentParser program("christfetch");
@@ -153,6 +192,9 @@ Argparser::Argparser(int argc, char* argv[]){
 
   program.add_argument("--config")
   .help("Select your own JSONC file");
+
+  program.add_argument("--os-ascii")
+  .help("Select your own ascii file");
 
 
   try {
@@ -177,6 +219,9 @@ Argparser::Argparser(int argc, char* argv[]){
   }
   if (program.present("--config")) {
     Argparser::Set_config_file(program);
+  }
+  if (program.present("--os-ascii")) {
+    Argparser::Set_os_ascii_file(program);
   }
   
 }
