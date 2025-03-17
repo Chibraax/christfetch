@@ -58,4 +58,6 @@ Gospel :
   Add language
 
   
-# FAQ
+# Speciam Thanks
+
+ <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> 
