@@ -43,7 +43,7 @@ int get_length_json(const json& obj_json) {
 int get_length_ascii(vector<string>& ascii_christ, int& longest_line){
     // Get the longest line + Get the numbers of lines
     int numbers_of_lines = 0;
-    vector<int> ddd ;
+    vector<int> ddd;
     try
     {
         for(auto& x : ascii_christ){
@@ -54,6 +54,7 @@ int get_length_ascii(vector<string>& ascii_christ, int& longest_line){
         
         auto maxIt = std::max_element(ddd.begin(), ddd.end());
         int maxIndex = std::distance(ddd.begin(), maxIt);
+
 
         return maxIndex;
     }
@@ -185,46 +186,27 @@ vector<string> get_taille_reel(std::vector<std::string> ascii){
 
     std::regex blue_pattern(R"(\x1B\[34m)");
     std::regex white_pattern(R"(\x1B\[0m)");
+    std::regex yellow_pattern(R"(\x1B\[33m)");
+    std::regex green_pattern(R"(\x1B\[32m)");
+    std::regex red_pattern(R"(\x1B\[31m)");
+    std::regex magenta_pattern(R"(\x1B\[35m)");
+    std::regex cyan_pattern(R"(\x1B\[36m)");
 
 
     for(auto x : ascii){
         x = regex_replace(x,blue_pattern,"");
         x = regex_replace(x,white_pattern,"");
+        x = regex_replace(x,yellow_pattern,"");
+        x = regex_replace(x,red_pattern,"");
+        x = regex_replace(x,green_pattern,"");
+        x = regex_replace(x,magenta_pattern,"");
+        x = regex_replace(x,cyan_pattern,"");
         vec_vierge.push_back(x);
     }
 
     return vec_vierge;
 }
 
-
-// Remove color tags to get and return a vector without them
-vector<string> format_color(std::vector<std::string>& ascii){
-
-    std::regex pattern1(R"(\$\{c1\})");
-    std::regex pattern2(R"(\$\{c2\})");
-    std::regex pattern3(R"(\$\{c3\})");
-    std::regex pattern4(R"(\$\{c4\})");
-    std::regex pattern5(R"(\$\{c5\})");
-    std::regex pattern6(R"(\$\{c6\})");
-    std::regex pattern7(R"(\$\{c7\})");
-
-    const std::regex ansi_escape(R"(\033\[[0-9;]*m)");
-
-
-    std::smatch match;
-    std::vector<string> vec_formated;
-    string xx ;
-    for(auto x : ascii){
-        if(std::regex_search(x,match,ansi_escape)){
-            xx = regex_replace(x,ansi_escape,"");
-        }
-        vec_formated.push_back(xx);
-
-    }
-
-
-    return vec_formated;
-}
 
 
 
@@ -320,15 +302,18 @@ bool display_christ(Argparser& Parser){
         std::vector<string> true_lengh = get_taille_reel(os_ascii);
 
         int max_index = get_length_ascii(os_ascii,longest_line1);
-        int espacement_necessaire1 = longest_line1+5;
+        int espacement_necessaire1 = longest_line1+2;
 
-
+        int ccount = 0;
         // int limi_number = os_ascii[max_index];
         //std::vector<string> final_vector = format_color(os_ascii);
-        for(auto& ascii2_character : os_ascii){
-            fmt::print("{}",ascii2_character);
+        for(auto& ascii2_character : true_lengh){
+            //fmt::print("{}{}",os_ascii[0].substr(0, 7),ascii2_character);
+            fmt::print("{}",os_ascii[ccount]);
+            ccount+=1;
+            fmt::print(RESET);
             if(c < length_json){
-                for(int cc = 0; cc <  (os_ascii[max_index].length()+5) - ascii2_character.length(); cc++){
+                for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length(); cc++){
                     fmt::print(" ");
                 }
                 if(c <= system_information.size()){
@@ -338,7 +323,7 @@ bool display_christ(Argparser& Parser){
                 }
             }
             c+=1;
-            fmt::print("\n");
+            fmt::print("{}\n",RESET);
         }
     }
     
