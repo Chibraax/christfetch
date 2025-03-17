@@ -60,4 +60,4 @@ Gospel :
   
 # Speciam Thanks
 
- <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> 
+ <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> - Show me how to do some stuff
