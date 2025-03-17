@@ -8,6 +8,5 @@ std::string get_colors(){
 
     std::string round_colors = fmt::format("{}● {}● {}● {}● {}● {}● {}● {}●",YELLOW,WHITE,CYAN,VIOLET,BLUE,YELLOW,GREEN,RED);
 
-
     return round_colors;
 }   

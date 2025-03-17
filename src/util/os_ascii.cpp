@@ -80,7 +80,7 @@ std::vector<std::string> debian = {
     "   ,g$$$P\"\"       \"\"\"Y$$$.\".",
     "  ,$$$P'              `$$$$$.",
     "',$$$P       ,ggs.     `$$$b:",
-    "`d$$$'     ,$P\"'   \033[31m.\033[0m    $$$$$",
+    "`d$$$'     ,$P\"'   \033[31m.\033[0m    $$$$$  ",
     " $$$P      d$'     \033[31m,\033[0m    $$$P",
     " $$$:      $$$.   \033[31m-\033[0m    ,d$$$'",
     " $$$;      Y$b._   _,d$P'",
@@ -121,17 +121,17 @@ std::vector<std::string> opensuse = {
     "           \033[0m.;ldkO0000Okdl;.",
     "       .;d00xl:^''''''^:ok00d;.",
     "     .d00l'                'o00d.",
-    "   .d0Kd'\033[34m  Okxol:;,.          \033[0m:O0d",
-    "  .OK\033[34mKKK0kOKKKKKKKKKKOxo:,      \033[0mlKO.",
-    " ,0K\033[34mKKKKKKKKKKKKKKK0P^\033[0m,,,\033[34m^dx:\033[0m    ;00,",
-    " .OK\033[34mKKKKKKKKKKKKKKKk'\033[0m.oOPPb.\033[34m'0k.\033[0m   cKO.",
-    " :KK\033[34mKKKKKKKKKKKKKKK: \033[0mkKx..dd \033[34mlKd\033[0m   'OK:",
-    " dKK\033[34mKKKKKKKKKOx0KKKd \033[0m^0KKKO' \033[34mkKKc\033[0m   dKd",
-    " dKK\033[34mKKKKKKKKKK;.;oOKx,..\033[0m^\033[34m..;kKKK0.\033[0m  dKd",
-    " :KK\033[34mKKKKKKKKKK0o;...^cdxxOK0O/^^'  \033[0m.0K:",
-    "  kKK\033[34mKKKKKKKKKKKKK0x;,,......,;od  \033[0mlKk",
-    "  '0K\033[34mKKKKKKKKKKKKKKKKKKKK00KKOo^  \033[0mc00'",
-    "   'kK\033[34mKKOxddxkOO00000Okxoc;''   \033[0m.dKk'",
+    "   .d0Kd'\033[32m  Okxol:;,.          \033[0m:O0d",
+    "  .OK\033[32mKKK0kOKKKKKKKKKKOxo:,      \033[0mlKO.",
+    " ,0K\033[32mKKKKKKKKKKKKKKK0P^\033[0m,,,\033[32m^dx:\033[0m    ;00,",
+    " .OK\033[32mKKKKKKKKKKKKKKKk'\033[0m.oOPPb.\033[32m'0k.\033[0m   cKO.",
+    " :KK\033[32mKKKKKKKKKKKKKKK: \033[0mkKx..dd \033[32mlKd\033[0m   'OK:",
+    " dKK\033[32mKKKKKKKKKOx0KKKd \033[0m^0KKKO' \033[32mkKKc\033[0m   dKd",
+    " dKK\033[32mKKKKKKKKKK;.;oOKx,..\033[0m^\033[32m..;kKKK0.\033[0m  dKd",
+    " :KK\033[32mKKKKKKKKKK0o;...^cdxxOK0O/^^'  \033[0m.0K:",
+    "  kKK\033[32mKKKKKKKKKKKKK0x;,,......,;od  \033[0mlKk",
+    "  '0K\033[32mKKKKKKKKKKKKKKKKKKKK00KKOo^  \033[0mc00'",
+    "   'kK\033[32mKKOxddxkOO00000Okxoc;''   \033[0m.dKk'",
     "     l0Ko.                    .c00l'",
     "      'l0Kk:.              .;xK0l'",
     "         'lkK0xl:;,,,,;:ldO0kl'",
@@ -146,7 +146,7 @@ std::vector<std::string> kali = {
     "\033[34m           .';;;:::;,,.x,",
     "\033[34m      ..'''.            0Xxoc:,.  ...",
     "\033[34m  ....                ,ONkc;,;cokOdc',.",
-    "\033[34m .                   OMo           ':\033[0mdd\033[0mo.",
+    "\033[34m .                   OMo           ':\033[0mdd\033[0mo.   ",
     "\033[34m                    dMc               :OO;",
     "\033[34m                    0M.                 .:o.",
     "\033[34m                    ;Wd",
@@ -162,6 +162,50 @@ std::vector<std::string> kali = {
     "\033[34m                                             ."
 };
 
+std::vector<std::string> gentoo = {
+    "\033[35m         -/oyddmdhs+:.",
+    "\033[35m     -o\033[0mdNMMMMMMMMNNmhy+\033[35m-`",
+    "\033[35m   -y\033[0mNMMMMMMMMMMMNNNmmdhy\033[35m+-",
+    "\033[35m `o\033[0mmMMMMMMMMMMMMNmdmmmmddhhy\033[35m/`",
+    "\033[35m om\033[0mMMMMMMMMMMMN\033[35mhhyyyo\033[0mhmdddhhhd\033[35mo`",
+    "\033[35m.y\033[0mdMMMMMMMMMMd\033[35mhs++so/s\033[0mmdddhhhhdm\033[35m+`",
+    "\033[35m oy\033[0mhdmNMMMMMMMN\033[35mdyooy\033[0mdmddddhhhhyhN\033[35md.",
+    "\033[35m  :o\033[0myhhdNNMMMMMMMNNNmmdddhhhhhyym\033[35mMh",
+    "\033[35m    .:\033[0m+sydNMMMMMNNNmmmdddhhhhhhmM\033[35mmy",
+    "\033[35m       /m\033[0mMMMMMMNNNmmmdddhhhhhmMNh\033[35ms:",
+    "\033[35m    `o\033[0mNMMMMMMMNNNmmmddddhhdmMNhs\033[35m+`",
+    "\033[35m  `s\033[0mNMMMMMMMMNNNmmmdddddmNMmhs\033[35m/.",
+    "\033[35m /N\033[0mMMMMMMMMNNNNmmmdddmNMNdso\033[35m:`",
+    "\033[35m+M\033[0mMMMMMMNNNNNmmmmdmNMNdso\033[35m/-",
+    "\033[35myM\033[0mMNNNNNNNmmmmmNNMmhs+/\033[35m-`",
+    "\033[35m/h\033[0mMMNNNNNNNNMNdhs++/\033[35m-`",
+    "\033[35m`/\033[0mohdmmddhys+++/:\033[35m.`",
+    "\033[35m  `-//////:--."
+};
+std::vector<std::string> alpine = {
+    "\033[34m       .hddddddddddddddddddddddh.",
+    "\033[34m      :dddddddddddddddddddddddddd:",
+    "\033[34m     /dddddddddddddddddddddddddddd/",
+    "\033[34m    +dddddddddddddddddddddddddddddd+",
+    "\033[34m  `sdddddddddddddddddddddddddddddddds`",
+    "\033[34m `ydddddddddddd++hdddddddddddddddddddy`",
+    "\033[34m.hddddddddddd+`  `+ddddh:-sdddddddddddh.",
+    "\033[34mhdddddddddd+`      `+y:    .sddddddddddh",
+    "\033[34mddddddddh+`   `//`   `.`     -sddddddddd",
+    "\033[34mddddddh+`   `/hddh/`   `:s-    -sddddddd",
+    "\033[34mddddh+`   `/+/dddddh/`   `+s-    -sddddd",
+    "\033[34mddd+`   `/o` :dddddddh/`   `oy-    .yddd",
+    "\033[34mhdddyo+ohddyosdddddddddho+oydddy++ohdddh",
+    "\033[34m.hddddddddddddddddddddddddddddddddddddh.",
+    "\033[34m `yddddddddddddddddddddddddddddddddddy`",
+    "\033[34m  `sdddddddddddddddddddddddddddddddds`",
+    "\033[34m    +dddddddddddddddddddddddddddddd+",
+    "\033[34m     /dddddddddddddddddddddddddddd/",
+    "\033[34m      :dddddddddddddddddddddddddd:",
+    "\033[34m       .hddddddddddddddddddddddh."
+};
+
+
 map<int, vector<string>> get_osascii_dict(){
 
     map<int, vector<string>> f_os_ascii_dict;
@@ -172,6 +216,9 @@ map<int, vector<string>> get_osascii_dict(){
     f_os_ascii_dict.insert(make_pair(5,mint));
     f_os_ascii_dict.insert(make_pair(6,opensuse));
     f_os_ascii_dict.insert(make_pair(7,kali));
+    f_os_ascii_dict.insert(make_pair(8,gentoo));
+    f_os_ascii_dict.insert(make_pair(9,alpine));
+
 
 
 

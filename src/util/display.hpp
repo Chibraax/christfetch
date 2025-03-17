@@ -83,10 +83,8 @@
         {"disk", get_disk},
         {"ip", get_ip},
         {"custom",get_custom},
-        {"gospel",get_gospel},
         {"uptime",get_uptime},
         {"colors",get_colors}
-
     };
 
     // initialize useful variables

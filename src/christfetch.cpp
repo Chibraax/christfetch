@@ -13,19 +13,22 @@ using namespace std;
 
 void Argparser::Set_lang(argparse::ArgumentParser& program){
 
-  auto fn = program.present("--lang");
+  auto lang = program.present("--lang");
 
-  int cnt = count(Argparser::all_languages.begin(),all_languages.end(),*fn);
+  int cnt = count(Argparser::all_languages.begin(),all_languages.end(),*lang);
   if(cnt <= 0){
-    fmt::print("Error: couldn't find langue: {}\n",*fn);
+    fmt::print("Error: couldn't find langue: {}\n",*lang);
   }
   if(cnt == 1) {
-    if(*fn != "en"){
-      Argparser::lang = *fn;
+    if(*lang == "en"){
+      Argparser::lang = *lang;
+    }
+    if(*lang == "fr"){
+      Argparser::lang = *lang;
     }
   }
   if(cnt > 1){
-    fmt::print("Error: couldn't find langue: {}\n",*fn);
+    fmt::print("Error: couldn't find langue: {}\n",*lang);
   }
 }
 
@@ -90,6 +93,12 @@ void Argparser::Set_os_ascii_file(argparse::ArgumentParser& program){
       }
       if(*distro == "kali"){
         Argparser::os_ascii = 7;
+      }
+      if(*distro == "gentoo"){
+        Argparser::os_ascii = 8;
+      }
+      if(*distro == "alpine"){
+        Argparser::os_ascii = 9;
       }
 
     }
@@ -229,15 +238,15 @@ Argparser::Argparser(int argc, char* argv[]){
 
 int main(int argc, char* argv[]) {
   if(argc == 1){
-    Argparser Parse;
-    display_christ(Parse); 
-    fmt::print("{}\n",get_gospel());
+    Argparser Parser;
+    display_christ(Parser); 
+    fmt::print("{}\n",get_gospel(Parser));
     return 0;
   }
 
-  Argparser Parse(argc, argv);
-  display_christ(Parse);
-  fmt::print("{}\n",get_gospel());
+  Argparser Parser(argc, argv);
+  display_christ(Parser);
+  fmt::print("{}\n",get_gospel(Parser));
 
   return 0;
 }

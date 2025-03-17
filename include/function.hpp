@@ -80,8 +80,8 @@
 
 #ifndef GOSPEL_HPP
 #define GOSPEL_HPP
-    extern std::string getgospel();
-    extern std::string get_gospel();
+    extern std::string getgospel(Argparser&);
+    extern std::string get_gospel(Argparser&);
 #endif
 
 #ifndef UPTIME_HPP

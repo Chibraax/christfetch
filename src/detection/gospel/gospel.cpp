@@ -8,6 +8,8 @@
 #include <regex>
 #include <sstream>
 
+#include "../../christfetch.hpp"
+
 using namespace std;
 
 struct gospel
@@ -28,8 +30,7 @@ int generate_random(int base_number,int& limit){
     return number;
 }
 
-bool define_langue_n_path(struct gospel& gospel_lang){
-    string lang = "fr";
+bool define_langue_n_path(struct gospel& gospel_lang,string& lang){
     if(lang == "en"){
 
         gospel_lang.lang_path = "en/";
@@ -112,9 +113,9 @@ bool remove_number_verse(string& random_verse ){
 }
 
 
-string getgospel(){
+string getgospel(Argparser& Parser){
 
-
+    string language = Parser.Get_lang();
     // Define useful variables
     ostringstream ss;
     gospel gospel_lang;
@@ -132,7 +133,7 @@ string getgospel(){
     }
     else{return "";}
 
-    define_langue_n_path(gospel_lang);
+    define_langue_n_path(gospel_lang,language);
     int size_struct = gospel_lang.files.size();
 
     nombre_random  = generate_random(1,size_struct);

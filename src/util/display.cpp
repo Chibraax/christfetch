@@ -18,6 +18,7 @@
 using namespace std;
 using json = nlohmann::ordered_json;
 
+// Generate a random number in an interval
 int generate_random(int& size_ascii_dict){
 
     random_device rd;                      // Générateur de nombres aléatoires (matériel ou pseudo)
@@ -28,7 +29,7 @@ int generate_random(int& size_ascii_dict){
 
     return number;
 }
-
+// get length of the JSON file
 int get_length_json(const json& obj_json) {
     int count_ligne_json = 0;
     if (obj_json.contains("modules") && obj_json["modules"].is_array()) {
@@ -39,7 +40,7 @@ int get_length_json(const json& obj_json) {
 
     return EXIT_FAILURE;
 }
-
+// Get length of the ascii
 int get_length_ascii(vector<string>& ascii_christ, int& longest_line){
     // Get the longest line + Get the numbers of lines
     int numbers_of_lines = 0;
@@ -64,7 +65,7 @@ int get_length_ascii(vector<string>& ascii_christ, int& longest_line){
     }
 
 }
-
+// Manipulation of the JSON file
 vector<string> get_vec_json(const json& obj_json, vector<string>& vec_json_type){
     vector<string> vec_json;
     regex key_pattern_double_bar("║");
@@ -159,7 +160,7 @@ vector<string> get_vec_json(const json& obj_json, vector<string>& vec_json_type)
     }
     return vec_json;
 }
-
+// get path of the Home directory
 string get_home(string& end_path){
 
     string path;
@@ -168,15 +169,6 @@ string get_home(string& end_path){
 
     return path;
 }
-
-
-
-
-
-
-
-
-
 // Remove color tags to get and return a vector without them
 vector<string> get_taille_reel(std::vector<std::string> ascii){
 
@@ -206,8 +198,6 @@ vector<string> get_taille_reel(std::vector<std::string> ascii){
 
     return vec_vierge;
 }
-
-
 
 
 bool display_christ(Argparser& Parser){
@@ -280,7 +270,7 @@ bool display_christ(Argparser& Parser){
                 for(int cc = 0; cc < espacement_necessaire - ascii_character.length(); cc++){
                     fmt::print(" ");
                 }
-                if(c <= system_information.size()){
+                if(c <= length_json){
                     fmt::print(vec_json_key[c]);
                     fmt::print(" ");
                     fmt::print("{}{}",color_text,system_information[vec_json_type[c]]());
@@ -302,7 +292,7 @@ bool display_christ(Argparser& Parser){
         std::vector<string> true_lengh = get_taille_reel(os_ascii);
 
         int max_index = get_length_ascii(os_ascii,longest_line1);
-        int espacement_necessaire1 = longest_line1+2;
+        int espacement_necessaire1 = longest_line1;
 
         int ccount = 0;
         // int limi_number = os_ascii[max_index];
@@ -313,10 +303,30 @@ bool display_christ(Argparser& Parser){
             ccount+=1;
             fmt::print(RESET);
             if(c < length_json){
-                for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length(); cc++){
-                    fmt::print(" ");
+                // gentoo
+                if(distro == 8 ){
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-18; cc++){
+                        fmt::print(" ");
+                    }
+                } 
+                // fedora
+                else if (distro == 1 ){
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-18; cc++){
+                        fmt::print(" ");
+                    }
+                } 
+                // alpine
+                else if (distro == 9 ){
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length(); cc++){
+                        fmt::print(" ");
+                    }
+                } 
+                else{
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-5; cc++){
+                        fmt::print(" ");
+                    }
                 }
-                if(c <= system_information.size()){
+                if(c <= length_json){
                     fmt::print(vec_json_key[c]);
                     fmt::print(" "); // Separator
                     fmt::print("{}{}",color_text,system_information[vec_json_type[c]]());
@@ -340,7 +350,8 @@ bool display_christ(Argparser& Parser){
                 for(int cc = 0; cc < espacement_necessaire - ascii_character.length(); cc++){
                     cout << " ";
                 }
-                if(c <= system_information.size()){
+                // if(c <= system_information.size()){
+                    if(c <= length_json){
                     cout  << vec_json_key[c];
                     cout << " ";
                     cout << color_text << system_information[vec_json_type[c]]();
