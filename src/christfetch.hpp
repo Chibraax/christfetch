@@ -38,7 +38,7 @@
       std::vector<std::string> all_languages = {"en","fr"};
       std::vector<std::string> all_colors_text = {"red","blue","yellow","magenta","green"};
       std::vector<std::string> all_colors_ascii = {"red","blue","yellow","magenta","green"};
-      std::vector<std::string> all_os_ascii = {"fedora","arch","ubuntu","debian","mint","opensuse","kali","gentoo","alpine"};
+      std::vector<std::string> all_os_ascii = {"fedora","arch","ubuntu","debian","mint","opensuse","kali","gentoo","alpine","endeavouros"};
 
       std::string lang{"en"};
       std::string ascii_file{};

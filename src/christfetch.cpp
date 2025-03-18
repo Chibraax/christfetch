@@ -101,6 +101,9 @@ void Argparser::Set_os_ascii_file(argparse::ArgumentParser& program){
         Argparser::os_ascii = 9;
       }
 
+      if(*distro == "endeavouros"){
+        Argparser::os_ascii = 10;
+      }
     }
   }
   if(cnt > 1){
@@ -173,6 +176,7 @@ void Argparser::Set_color_ascii(argparse::ArgumentParser& program){
     if(*colors == "green"){
       Argparser::color_ascii = "\033[32m";
     }
+    
   }
   
   if(cnt > 1){

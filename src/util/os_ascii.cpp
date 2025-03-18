@@ -206,6 +206,29 @@ std::vector<std::string> alpine = {
 };
 
 
+std::vector<std::string> endeavouros = {
+    "                     \033[31m./\033[35mo\033[34m.",
+    "                   \033[31m./\033[35msssso\033[34m-",
+    "                 \033[31m`:\033[35mosssssss+\033[34m-",
+    "               \033[31m`:+\033[35msssssssssso\033[34m/.",
+    "             \033[31m`-/o\033[35mssssssssssssso\033[34m/.",
+    "           \033[31m`-/+\033[35msssssssssssssssso\033[34m+:`",
+    "         \033[31m`-:/+\033[35msssssssssssssssssso\033[34m+/.",
+    "       \033[31m`.://o\033[35msssssssssssssssssssso\033[34m++-",
+    "      \033[31m.://+\033[35mssssssssssssssssssssssso\033[34m++:",
+    "    \033[31m.:///o\033[35mssssssssssssssssssssssssso\033[34m++:",
+    "  \033[31m`:////\033[35mssssssssssssssssssssssssssso\033[34m+++.",
+    "\033[31m`-////+\033[35mssssssssssssssssssssssssssso\033[34m++++-",
+    " \033[31m`..-+\033[35moosssssssssssssssssssssssso\033[34m+++++/`",
+    "   \033[34m./++++++++++++++++++++++++++++++/:.",
+    "  \033[34m`:::::::::::::::::::::::::------``"
+};
+
+
+
+
+
+
 map<int, vector<string>> get_osascii_dict(){
 
     map<int, vector<string>> f_os_ascii_dict;
@@ -218,10 +241,7 @@ map<int, vector<string>> get_osascii_dict(){
     f_os_ascii_dict.insert(make_pair(7,kali));
     f_os_ascii_dict.insert(make_pair(8,gentoo));
     f_os_ascii_dict.insert(make_pair(9,alpine));
-
-
-
-
+    f_os_ascii_dict.insert(make_pair(10,endeavouros));
 
     return f_os_ascii_dict;
 }
