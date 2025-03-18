@@ -63,7 +63,7 @@ json_config_file = """
 
 home_user = os.path.expanduser("~")
 
-with open(home_user+'/config_christfetch.jsonc','a') as f:
+with open(home_user+'/config_christfetch.jsonc','w') as f:
     f.write(json_config_file)
 
 print('Config file at : {}/config_christfetch.jsonc'.format(home_user))
