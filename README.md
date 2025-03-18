@@ -19,14 +19,15 @@ You'll need to enter your root password, the script will install the requiere to
  <a href="https://conan.io/downloads">Install conan</a>  
 
  `cd christfetch`
- 
+
+ `conan profile detect --force`
+
  `conan install . --output-folder=build --build=missing`
  
  `cd build`
  
- `cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release`
+ `cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release && cmake --build .`
  
- `cmake --build .`
 
  The executable is named : `christfetch`.
 
@@ -52,7 +53,6 @@ Display :
 
   Add language
 
-  
 # Special Thanks
 
  <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> - Show me how to do some stuff
