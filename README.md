@@ -1,22 +1,14 @@
 # Christfetch
- <img src="logo.png" alt="Paris" class="center"> 
+ <img src="logo.png" alt="christfetch" class="center"> 
 
-ChristFetch is a neofetch-like tool for display OS informations on the terminal.Every time christfetch is executed a random verse of the bible will be display. Written in C++ so it's speed daemon.
+Christfetch is a neofetch-like tool for display OS informations on the terminal. Every time christfetch is executed a random verse of the bible will be display. Written in C++ so it's speed daemon.
 Currently working only on Linux.
 
-# Installation 
-Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build system and `g++` for the compiler. 
-In order to install christfetch you will need few tools.
-
-The easiest way to install it is by running the `run.sh` file in the root folder.
-
-You'll need to enter your root password, the script will install the requiere tools.
-
-# If you want to build it from source : 
+# Build from source : 
 
 # Install conan
 
- <a href="https://conan.io/downloads">Install conan</a>  
+ Install conan <a href="https://conan.io/downloads">here</a>
 
  `cd christfetch && conan profile detect --force`
 
@@ -25,13 +17,20 @@ You'll need to enter your root password, the script will install the requiere to
  `cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release && cmake --build .`
  
 
- The executable is named : `christfetch`.
+# Installation 
+Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build system and `g++` for the compiler. 
+
+The easiest way to install it is by running the `run.sh` file in the root folder.
+
+You'll need to enter your root password, the script will install the requiere tools.
+
+The executable is named : `christfetch`.
 
 # Customization
 Display : 
-    Christfetch is based on a JSONC (JSON with comments) file located in ~/.config/christfetch.
+    christfetch is based on a JSONC (JSON with comments) file located in ~/.config/christfetch.
       
-   For now there is only gospels from Matthew,Mark,Luke,Jhon.
+   For now there is only gospels from Matthew, Mark, Luke, Jhon.
       
    If you want add some verse, you can by respect the following standard : 
    
