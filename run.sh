@@ -124,7 +124,7 @@ Arch)
         fi
 
         # Install Conan
-        git clone
+        git clone https://github.com/conan-io/conan && cd conan && python3 setup.py install;
         conan profile detect --force 
         # Install christfetch
         conan install . --output-folder=build --build=missing;
