@@ -95,7 +95,7 @@ Debian)
 
         # Install Conan
         conan profile detect --force 
-        wget https://github.com/conan-io/conan/releases/download/2.12.2/conan-2.12.2-amd64.deb && sudo dpkg -i conan-2.12.2-amd64.deb && rm conan-2.12.2-amd64.deb;
+        wget https://github.com/conan-io/conan/releases/download/2.14.0/conan-2.14.0-amd64.deb && sudo dpkg -i conan-2.14.0-amd64.deb && rm conan-2.14.0-amd64.deb;
         # Install christfetch
         conan install . --output-folder=build --build=missing;
         cd build;
@@ -122,10 +122,9 @@ Arch)
                 echo "Cmake not installed"
                 sudo pacman -Syu cmake;
         fi
-        fi
 
         # Install Conan
-        yay -S conan
+        git clone
         conan profile detect --force 
         # Install christfetch
         conan install . --output-folder=build --build=missing;
