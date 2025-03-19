@@ -18,14 +18,10 @@ You'll need to enter your root password, the script will install the requiere to
 
  <a href="https://conan.io/downloads">Install conan</a>  
 
- `cd christfetch`
+ `cd christfetch && conan profile detect --force`
 
- `conan profile detect --force`
-
- `conan install . --output-folder=build --build=missing`
- 
- `cd build`
- 
+ `conan install . --output-folder=build --build=missing && cd build`
+  
  `cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release && cmake --build .`
  
 
