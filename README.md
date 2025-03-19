@@ -4,6 +4,8 @@
 Christfetch is a neofetch-like tool for display OS informations on the terminal. Every time christfetch is executed a random verse of the bible will be display. Written in C++ so it's speed daemon.
 Currently working only on Linux.
 
+Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build system and `g++` for the compiler. 
+
 # Build from source : 
 
 # Install conan
@@ -18,9 +20,10 @@ Currently working only on Linux.
  
 
 # Installation 
-Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build system and `g++` for the compiler. 
 
-The easiest way to install it is by running the `run.sh` file in the root folder.
+The easiest way to install it is by running the `run.sh` file in the christfetch folder.
+
+Python3 is needed.
 
 You'll need to enter your root password, the script will install the requiere tools.
 
