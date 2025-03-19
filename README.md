@@ -8,8 +8,6 @@ Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build
 
 # Build from source : 
 
-# Install conan
-
  Install conan <a href="https://conan.io/downloads">here</a>
 
  `cd christfetch && conan profile detect --force`
