@@ -6,19 +6,6 @@ Currently working only on Linux.
 
 # Examples
 
-<div class="row">
-  <div class="column">
-    <img src="screenshots/1.png" alt="Snow" style="width:50%">
-  </div>
-  <div class="column">
-    <img src="screenshots/2.png" alt="Forest" style="width:50%">
-  </div>
-  <div class="column">
-    <img src="screenshots/3.png" alt="Mountains" style="width:50%">
-  </div>
-</div>
-
-
 <img src="screenshots/1.png" width="49%" align="left" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png" width="49%" height="16px" align="left" />
 <img src="screenshots/2.png" width="49%" align="left" />
