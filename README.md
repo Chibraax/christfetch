@@ -21,12 +21,10 @@ Currently working only on Linux.
 
 <img src="screenshots/1.png" width="49%" align="left" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png" width="49%" height="16px" align="left" />
-<img src="screenshots/example4.png" width="49%" align="left" />
+<img src="screenshots/2.png" width="49%" align="left" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png" width="49%" height="16px" align="left" />
-<img src="screenshots/example2.png" width="48%" align="top" />
-<img src="screenshots/example3.png" width="48%" align="top" />
-<img src="screenshots/example5.png" height="15%" align="top" />
-
+<img src="screenshots/3.png" width="48%" align="top" />
+<img src="screenshots/4.png" width="48%" align="top" />
 
 # Build from source : 
 
