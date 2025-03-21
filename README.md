@@ -8,13 +8,13 @@ Currently working only on Linux.
 
  <div class="row">
   <div class="column">
-    <img src="1.png" alt="Snow" style="width:100%">
+    <img src="screenshots/1.png" alt="Snow" style="width:100%">
   </div>
   <div class="column">
-    <img src="2.png" alt="Forest" style="width:100%">
+    <img src="screenshots/2.png" alt="Forest" style="width:100%">
   </div>
   <div class="column">
-    <img src="3.pnhg" alt="Mountains" style="width:100%">
+    <img src="screenshots/3.pnhg" alt="Mountains" style="width:100%">
   </div>
 </div> 
 
