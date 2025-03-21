@@ -5,10 +5,10 @@ Christfetch is a neofetch-like tool for display OS informations on the terminal.
 Currently working only on Linux.
 
 # Examples
- <img src="screenshots/logo.png" alt="christfetch" class="center" width=500 height=350> 
- <img src="screenshots/logo.png" alt="christfetch" class="center" width=500 height=350> 
- <img src="screenshots/logo.png" alt="christfetch" class="center" width=500 height=350> 
- <img src="screenshots/logo.png" alt="christfetch" class="center" width=500 height=350> 
+ <img src="screenshots/1.png" alt="christfetch" class="center" width=500 height=350> 
+ <img src="screenshots/2.png" alt="christfetch" class="center" width=500 height=350> 
+ <img src="screenshots/3.png" alt="christfetch" class="center" width=500 height=350> 
+ <img src="screenshots/4.png" alt="christfetch" class="center" width=500 height=350> 
 
 
 # Build from source : 
