@@ -3,27 +3,15 @@
 
 Christfetch is a neofetch-like tool for display OS informations on the terminal. Every time christfetch is executed a random verse of the bible will be display. Written in C++ so it's speed daemon.
 Currently working only on Linux.
-<html>
-<head>
+
 # Examples
  
 <style>
-* {
-  box-sizing: border-box;
-}
+* {box-sizing: border-box;}
 
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
-}
+.column {float: left;width: 33.33%;padding: 5px;}
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+ .row::after {content: "";clear: both;display: table;}
 </style>
 </head>
 <body>
