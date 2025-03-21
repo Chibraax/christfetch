@@ -18,6 +18,16 @@ Currently working only on Linux.
   </div>
 </div>
 
+
+<img src="screenshots/1.png" width="49%" align="left" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png" width="49%" height="16px" align="left" />
+<img src="screenshots/example4.png" width="49%" align="left" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Square_Tiles_Texture.png" width="49%" height="16px" align="left" />
+<img src="screenshots/example2.png" width="48%" align="top" />
+<img src="screenshots/example3.png" width="48%" align="top" />
+<img src="screenshots/example5.png" height="15%" align="top" />
+
+
 # Build from source : 
 
  Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build system and `g++` for the compiler. 
