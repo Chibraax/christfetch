@@ -34,7 +34,7 @@ Python3 is needed.
 
 You'll need to enter your root password, the script will install the requiere tools.
 
-The executable is named : `christfetch`.
+The executable is named : `christfetch`, inside `build` folder.
 
 # Customization
 Display : 
