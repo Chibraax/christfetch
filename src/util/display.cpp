@@ -315,9 +315,20 @@ bool display_christ(Argparser& Parser){
                         fmt::print(" ");
                     }
                 } 
+                else if (distro == 11 ){
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-25; cc++){
+                        fmt::print(" ");
+                    }
+                } 
                 // alpine
                 else if (distro == 9 ){
                     for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length(); cc++){
+                        fmt::print(" ");
+                    }
+                } 
+                // Opensuse
+                else if (distro == 6 ){
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-13; cc++){
                         fmt::print(" ");
                     }
                 } 

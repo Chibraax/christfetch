@@ -24,30 +24,6 @@ vector<string> bible_ascii = {
     ""
 };
 
-vector<string> big_bible_ascii = {
-    "   __________________________",
-    "  /\\                         \\",
-    " /  \\            ____         \\",
-    "/ \\/ \\          /\\   \\         \\",
-    "\\ /\\  \\         \\ \\   \\         \\",
-    " \\  \\  \\     ____\\_\\   \\______   \\",
-    "  \\   /\\\\   /\\                \\   \\",
-    "   \\ /\\/ \\  \\ \\_______    _____\\   \\",
-    "    \\\\/ / \\  \\/______/\\   \\____/    \\",
-    "     \\ / /\\\\         \\ \\   \\         \\",
-    "      \\ /\\/ \\         \\ \\   \\         \\",
-    "       \\\\/ / \\         \\ \\   \\         \\",
-    "  May   \\ /   \\         \\ \\   \\         \\",
-    "         \\\\  /\\\\         \\ \\   \\         \\",
-    "God Bless \\ /\\  \\         \\ \\___\\         \\",
-    "           \\\\    \\         \\/___/          \\",
-    "  you in    \\  \\/ \\                         \\",
-    "             \\ /\\  \\_________________________\\",
-    " all  your    \\  \\ / ______________________  /",
-    "               \\  / ______________________  /",
-    "Endeavors!!!    \\/_________________________/",
-
-};
 
 vector<string> big_cross_ascii = {
     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
@@ -74,28 +50,6 @@ vector<string> big_cross_ascii = {
     "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
 };
 
-vector<string> hands_cross_ascii = {
-    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠛⠛⠛⢻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⠀⠀⠀⣶⣶⣶⣶⣶⣿⠀⠀⠀⠸⣿⣶⣶⣶⣶⣶⠀⠀⠀⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⠀⠀⠀⣿⣄⣀⣀⣀⣀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣿⠀⠀⠀⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⣿⠁⠀⠀⢸⡏⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀",
-    "⣶⢶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡶⣶",
-    "⣿⠘⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢠⣿",
-    "⢿⡆⢿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⢸⣿",
-    "⢸⡇⢸⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠁⢸⡇",
-    "⢸⣧⠀⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⣿⣀⣀⣀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⣰⡟⠀⣿⠁",
-    "⠈⣿⠀⠈⢿⣶⡿⠿⣷⣄⠀⠀⠀⠉⠉⠉⠉⠉⠉⠀⠀⠀⣠⣾⠿⣿⣴⡿⠁⠀⣿⠀",
-    "⠀⢻⣦⡀⠀⠙⢿⣄⠈⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠟⠁⣴⡿⠋⠀⢀⣼⡏⠀",
-    "⠀⠀⠙⢿⣦⡀⠀⠻⣷⣄⠈⠻⣶⣀⠀⠀⠀⠀⣠⣾⠿⠅⣠⡾⠋⠀⠀⣤⡿⠋⠀⠀",
-    "⠀⠀⠀⠀⠙⣷⡄⠀⠈⠋⠁⠀⠈⢿⣆⠀⠀⣸⡟⠉⠀⠀⠋⠁⠀⣠⡿⠏⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠈⣿⠀⠀⣿⠀⠀⠀⠀⠀⠀⡀⣿⠁⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀⠀⠀⢰⡿⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⣿⡀⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⢸⣧⠀⠀⠀⠀⠀⠀⢻⣇⠀⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⣴⣿⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠈⣿⡀⠀⠀⠀⠀⠀⠌⣿⣦⠀⠀⠀⠀",
-    "⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀"
-};
 
 vector<string> multiples_cross_ascii = {
     "           \\       /",
@@ -170,13 +124,11 @@ map<int, vector<string>> get_christascii_dict(){
 
     map<int, vector<string>> f_christ_dict;
     f_christ_dict.insert(make_pair(1,bible_ascii));
-    f_christ_dict.insert(make_pair(2,big_bible_ascii));
-    f_christ_dict.insert(make_pair(3,big_cross_ascii));
-    f_christ_dict.insert(make_pair(4,hands_cross_ascii));
-    f_christ_dict.insert(make_pair(5,multiples_cross_ascii));
-    f_christ_dict.insert(make_pair(6,cross_circle));
-    f_christ_dict.insert(make_pair(7,crucifixed));
-    f_christ_dict.insert(make_pair(8,little_cross));
+    f_christ_dict.insert(make_pair(2,big_cross_ascii));
+    f_christ_dict.insert(make_pair(3,multiples_cross_ascii));
+    f_christ_dict.insert(make_pair(4,cross_circle));
+    f_christ_dict.insert(make_pair(5,crucifixed));
+    f_christ_dict.insert(make_pair(6,little_cross));
 
     return f_christ_dict;
 }

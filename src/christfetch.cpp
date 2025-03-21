@@ -100,9 +100,11 @@ void Argparser::Set_os_ascii_file(argparse::ArgumentParser& program){
       if(*distro == "alpine"){
         Argparser::os_ascii = 9;
       }
-
       if(*distro == "endeavouros"){
         Argparser::os_ascii = 10;
+      }
+      if(*distro == "pop"){
+        Argparser::os_ascii = 11;
       }
     }
   }
@@ -198,10 +200,10 @@ Argparser::Argparser(int argc, char* argv[]){
   .help("Set your own ascii file");
 
   program.add_argument("--color-text")
-  .help("Define color of the informations. [red|blue|yellow|magenta]");
+  .help("Define color of the informations. [red|blue|yellow|magenta|green]");
   
   program.add_argument("--color-ascii")
-  .help("Define color of the ascii. [red|blue|yellow|magenta]");
+  .help("Define color of the ascii. [red|blue|yellow|magenta|green]");
 
   program.add_argument("--config")
   .help("Select your own JSONC file");
