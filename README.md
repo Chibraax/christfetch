@@ -39,9 +39,6 @@ Currently working only on Linux.
   <div class="column">
     <img src="screenshots/3.png" alt="Mountains" style="width:50%">
   </div>
-   <div class="column">
-    <img src="screenshots/4.png" alt="Mountains" style="width:50%">
-  </div>
 </div>
 
 # Build from source : 
