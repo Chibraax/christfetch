@@ -6,15 +6,12 @@ Currently working only on Linux.
 
 # Examples
  
-<style>
- 
-* {box-sizing: border-box;}
+<style>* {box-sizing: border-box;}
 
 .column {float: left;width: 33.33%;padding: 5px;}
 
  .row::after {content: "";clear: both;display: table;}
 
- 
 </style>
 </head>
 <body>
