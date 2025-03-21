@@ -31,16 +31,16 @@ Currently working only on Linux.
 
 <div class="row">
   <div class="column">
-    <img src="screenshots/1.png" alt="Snow" style="width:100%">
+    <img src="screenshots/1.png" alt="Snow" style="width:50%">
   </div>
   <div class="column">
-    <img src="screenshots/2.png" alt="Forest" style="width:100%">
+    <img src="screenshots/2.png" alt="Forest" style="width:50%">
   </div>
   <div class="column">
-    <img src="screenshots/3.png" alt="Mountains" style="width:100%">
+    <img src="screenshots/3.png" alt="Mountains" style="width:50%">
   </div>
    <div class="column">
-    <img src="screenshots/4.png" alt="Mountains" style="width:100%">
+    <img src="screenshots/4.png" alt="Mountains" style="width:50%">
   </div>
 </div>
 
