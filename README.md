@@ -5,19 +5,44 @@ Christfetch is a neofetch-like tool for display OS informations on the terminal.
 Currently working only on Linux.
 
 # Examples
+<style>
+* {
+  box-sizing: border-box;
+}
 
- <div class="row">
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body>
+
+<h2>Images Side by Side</h2>
+<p>How to create side-by-side images with the CSS float property:</p>
+
+<div class="row">
   <div class="column">
-    <img src="screenshots/1.png" alt="Snow" style="width:100%" style="float: left; width: 33.33%; padding: 5px;">
-
+    <img src="screenshots/1.png" alt="Snow" style="width:100%">
   </div>
   <div class="column">
     <img src="screenshots/2.png" alt="Forest" style="width:100%">
   </div>
   <div class="column">
-    <img src="screenshots/3.pnhg" alt="Mountains" style="width:100%">
+    <img src="screenshots/3.png" alt="Mountains" style="width:100%">
   </div>
-</div> 
+   <div class="column">
+    <img src="screenshots/4.png" alt="Mountains" style="width:100%">
+  </div>
+</div>
 
 # Build from source : 
 
