@@ -1,4 +1,4 @@
-# Christfetch
+# christfetch
  <img src="screenshots/logo.png" alt="christfetch" class="center" width=500 height=350> 
 
 Christfetch is a neofetch-like tool for display OS informations on the terminal. Every time christfetch is executed a random verse of the bible will be display. Written in C++ so it's speed daemon.
