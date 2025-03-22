@@ -4,7 +4,7 @@
 
 std::string getshell(){
 
-  std::string shell = 
+  std::string shell;
 
 
   return shell

@@ -332,6 +332,12 @@ bool display_christ(Argparser& Parser){
                         fmt::print(" ");
                     }
                 } 
+                // Endeavour
+                else if (distro == 10 ){
+                    for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-10; cc++){
+                        fmt::print(" ");
+                    }
+                } 
                 else{
                     for(int cc = 0; cc <  espacement_necessaire1 - ascii2_character.length()-5; cc++){
                         fmt::print(" ");

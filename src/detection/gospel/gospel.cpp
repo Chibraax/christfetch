@@ -51,6 +51,7 @@ bool define_langue_n_path(struct gospel& gospel_lang,string& lang){
 
         return true;
     }
+    
     return false;
 }
 
@@ -95,21 +96,41 @@ string get_random_verse(int& number, vector<string>& all_verses){return all_vers
 
 string get_number_verse(string& final_gospel){
 
-    regex pattern(R"(\d{1,2}\-\d{1,2}\:)");
-    smatch match;
     string only_verse;
+    try
+    {
+        regex pattern(R"(\d{1,2}\-\d{1,2}\:)");
+        smatch match;
+        if(regex_search(final_gospel,match,pattern)){ only_verse = match.str();}
+        
+        return only_verse;
     
-    if(regex_search(final_gospel,match,pattern)){ only_verse = match.str();}
-
-
+    }
+    catch(const std::exception& e)
+    {
+        //std::cerr << e.what() << '\n';
+        return "";
+    }
+    
     return only_verse;
 }
 
 bool remove_number_verse(string& random_verse ){
-    regex pattern(R"(\d{1,2}\-\d{1,2}\:)");
+    try
+    {
+        regex pattern(R"(\d{1,2}\-\d{1,2}\:)");
+        random_verse = regex_replace(random_verse,pattern,"");
 
-    random_verse = regex_replace(random_verse,pattern,"");
-    return true;
+        return true;
+    }
+    catch(const std::exception& e)
+    {
+        // std::cerr << e.what() << '\n';
+        return false;
+    }
+    
+
+    return false;
 }
 
 
