@@ -54,9 +54,14 @@ Display :
 # Contribution
   This project NEED contribution and you can help me in many ways.
 
-  Add gospels
+  Add gospels : 
+  
+   The purpose is not to add all verses of the bible, but only the "most beautiful" ones.
+   
+   Of course beautifullness is discutable.
 
-  Add language
+   
+  Add language 
 
 # FAQ 
 
