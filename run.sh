@@ -63,11 +63,17 @@ RED_HAT)
                 sudo dnf install cmake -y
         fi
 
-        # Install Conan
-        sudo dnf install conan;
-        conan profile detect --force;
+        # Verif conan
+        if [[ -f "/usr/bin/conan" ]]
+        then
+          echo "Package manager conan installed";
+        else
+          echo "conan not installed";
+          sudo dnf install conan;
+        fi
 
         # Install christfetch
+        conan profile detect --force;
         conan install . --output-folder=build --build=missing;
         cd build;
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release;
@@ -93,10 +99,18 @@ Debian)
                 sudo apt install cmake -y
         fi
 
-        # Install Conan
-        conan profile detect --force 
-        wget https://github.com/conan-io/conan/releases/download/2.14.0/conan-2.14.0-amd64.deb && sudo dpkg -i conan-2.14.0-amd64.deb && rm conan-2.14.0-amd64.deb;
+        # Verif conan
+        if [[ -f "/usr/bin/conan" ]]
+        then
+          echo "Packet manager conan installed";
+        else
+          echo "conan not installed";
+          
+          wget https://github.com/conan-io/conan/releases/download/2.14.0/conan-2.14.0-amd64.deb && sudo dpkg -i conan-2.14.0-amd64.deb && rm conan-2.14.0-amd64.deb;
+        fi
+
         # Install christfetch
+        conan profile detect --force;
         conan install . --output-folder=build --build=missing;
         cd build;
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release;
@@ -123,8 +137,16 @@ Arch)
                 sudo pacman -Syu cmake;
         fi
 
+        # Verif G++
+        if [[ -f "/usr/bin/conan" ]]
+        then
+          echo "Packet manager conan installed";
+        else
+          echo "Conan not installed";
+          git clone https://github.com/conan-io/conan && cd conan && python3 setup.py install;
+        fi
+
         # Install Conan
-        git clone https://github.com/conan-io/conan && cd conan && python3 setup.py install;
         conan profile detect --force 
         # Install christfetch
         conan install . --output-folder=build --build=missing;
