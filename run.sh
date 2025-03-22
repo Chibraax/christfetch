@@ -144,6 +144,7 @@ Arch)
         else
           echo "Conan not installed";
           git clone https://github.com/conan-io/conan && cd conan && python3 setup.py install;
+          cd ..;
         fi
 
         # Install Conan
