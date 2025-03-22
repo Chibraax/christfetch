@@ -61,3 +61,19 @@ Display :
 # Special Thanks
 
  <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> - Show me how to do some stuff
+
+# FAQ 
+
+How to change the language ? 
+
+Example : `--lang fr` 
+
+Actually there is only french and english.
+
+How to display my own ascii file ? 
+
+`--ascii-file` /path/ascii/file.txt
+
+You can change the color of the ascii and of the text. 
+
+Everything is explain here `christfetch --help`.
