@@ -38,7 +38,7 @@ The executable is named : `christfetch`, inside `build` folder.
 
 # Customization
 Display : 
-    christfetch is based on a JSONC (JSON with comments) file located in ~/.config/christfetch.
+    christfetch is based on a JSONC (JSON with comments) file located in `~/.config/christfetch`.
       
    For now there is only gospels from Matthew, Mark, Luke, Jhon.
       
