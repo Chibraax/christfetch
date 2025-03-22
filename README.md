@@ -28,11 +28,11 @@ Currently working only on Linux.
 
 # Installation 
 
-The easiest way to install it is by running the `run.sh` file in the christfetch folder.
+The easiest way to install it is by running the `run.sh`(`bash run.sh`) file in the christfetch folder.
 
-Python3 is needed.
+Python3 is required.
 
-You'll need to enter your root password, the script will install the requiere tools.
+You'll need to enter your root password, the script will install the required tools.
 
 The executable is named : `christfetch`, inside `build` folder.
 
@@ -52,15 +52,11 @@ Display :
 
 
 # Contribution
-  This project NEED contribution and you can help us in many ways.
+  This project NEED contribution and you can help me in many ways.
 
   Add gospels
 
   Add language
-
-# Special Thanks
-
- <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> - Show me how to do some stuff
 
 # FAQ 
 
@@ -77,3 +73,9 @@ How to display my own ascii file ?
 You can change the color of the ascii and of the text. 
 
 Everything is explain here `christfetch --help`.
+
+
+# Special Thanks
+
+ <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a> - Show me how to do some stuff
+
