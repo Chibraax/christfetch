@@ -15,7 +15,7 @@ Currently working only on Linux.
 
 # Build from source : 
 
- Chrisfetch is written mainly in C++, `Conan` as package manager,`Cmake` as build system and `g++` for the compiler. 
+ Chrisfetch is written mainly in C++, `Conan` as package manager, and `Cmake` as build system.
 
  Install conan <a href="https://conan.io/downloads">here</a>
 
