@@ -1,0 +1,44 @@
+{
+    "modules": [
+        {
+            "key": "•••••••••••••",
+            "type": "custom"
+        },
+        {
+            "key": "• {#35} kernel  •",
+            "type": "kernel"
+        },
+        {
+            "key": "• {#35}󰍛 cpu     •",
+            "type": "cpu"
+        },
+        {
+            "key": "• {#33}󰹡 memory  •",
+            "type": "memory"
+        },
+        {
+            "key": "• {#32}󰉉 disk    •",
+            "type": "disk"
+        },
+        {
+            "key": "• {#31}󰩟 ip      •",
+            "type": "ip"
+        },
+        {
+            "key": "• {#31}󱑏 uptime  •",
+            "type": "uptime"
+        },
+        {
+            "key": "•••••••••••••",
+            "type": "custom"
+        },
+        {
+            "key": "• {#1} colors  •",
+            "type": "colors"
+        },
+        {
+            "key": "•••••••••••••",
+            "type": "custom"
+        }
+    ]
+}

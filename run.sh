@@ -143,7 +143,7 @@ Arch)
           echo "Packet manager conan installed";
         else
           echo "Conan not installed";
-          git clone https://github.com/conan-io/conan && cd conan && python3 setup.py install;
+          git clone https://github.com/conan-io/conan && cd conan && sudo python3 setup.py install;
           cd ..;
         fi
 
@@ -151,7 +151,6 @@ Arch)
         conan profile detect --force 
         # Install christfetch
         conan install . --output-folder=build --build=missing;
-        cd build;
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release;
         cmake --build .;
 
